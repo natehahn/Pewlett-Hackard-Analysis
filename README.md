@@ -2,7 +2,7 @@
 
 ### Overview
 
-This analysis was completed at the request of a company.  The analysis is centered around the current employee makeup using multiple inputs and the retirement eligibility of employees.  Several insights were discovered that will support the company in preparing for the future with regards to hiring needs and who is eligible for support in the Mentorship Program.
+This analysis was completed at the request of Pewlett Hackard.  The analysis is centered around the current employee makeup using multiple inputs and the retirement eligibility of employees.  Several insights were discovered that will support the company in preparing for the future with regards to hiring needs and who is eligible for support in the Mentorship Program.
 
 Program Used: PostgreSQL15, PgAdmin4
 Version: 15.1
@@ -24,4 +24,15 @@ When we conducted the analysis on the provided spreadsheets we discovered some i
 
 To recap the most essential elements of this report:
 
-1. 
+1. 72,458 employees are eligible for retirement.  That means hiring will need to begin immediately to insure continuity within the company.
+2. There are enough retirement-ready employees to mentor the next generation of employees.  
+
+In order to identify how many employees there are in each department to mentor new employees, we can use the code:
+
+-- Number of mentors per department
+SELECT COUNT(mp.emp_no), mp.title
+FROM mentorship_program_eligible as mp
+GROUP BY mp.title
+ORDER BY count;
+
+
