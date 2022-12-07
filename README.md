@@ -14,5 +14,14 @@ When we conducted the analysis on the provided spreadsheets we discovered some i
  -  First, we called upon the data to identify those within the retirement categorie and removed those that may have transferred to another position within the company.
  -  Next we created a count of all the personnel that could retire based on the work title.  What we found is alarming.  See the image below.
  
-![Retirement Count](/data/retirement_count.png)
+![Retirement Count](https://github.com/natehahn/Pewlett-Hackard-Analysis/blob/main/Data/retirement_count.png)
  
+- If all of the personnel chose to retire tomorrow, more than 65,000 staff members would be leaving.  Many in senior management and engineer roles.  The need to get ahead of identifying those who wish to retire in the near term and start hiring for positions should be a priority.
+
+- The next querie conducted was to identify those that are eligible to participate in a mentorship program for training those new employees.  Over 1500 employees are eligible for this program.  The individuals are included in the mentorship_program_eligible.csv.
+
+### Summary
+
+To recap the most essential elements of this report:
+
+1. 
