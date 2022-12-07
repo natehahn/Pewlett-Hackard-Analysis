@@ -4,7 +4,7 @@
 
 This analysis was completed at the request of Pewlett Hackard.  The analysis is centered around the current employee makeup using multiple inputs and the retirement eligibility of employees.  Several insights were discovered that will support the company in preparing for the future with regards to hiring needs and who is eligible for support in the Mentorship Program.
 
-Program Used: PostgreSQL15, PgAdmin4
+Program Used: PostgreSQL15, PgAdmin4<br> 
 Version: 15.1
 
 ### Results
@@ -29,10 +29,12 @@ To recap the most essential elements of this report:
 
 In order to identify how many employees there are in each department to mentor new employees, we can use the code:
 
--- Number of mentors per department
-SELECT COUNT(mp.emp_no), mp.title
-FROM mentorship_program_eligible as mp
-GROUP BY mp.title
+-- Number of mentors per department<br>
+SELECT COUNT(mp.emp_no), mp.title<br> 
+FROM mentorship_program_eligible as mp<br> 
+GROUP BY mp.title<br>
 ORDER BY count;
+
+
 
 
