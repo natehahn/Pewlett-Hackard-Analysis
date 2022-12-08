@@ -4,7 +4,7 @@ SELECT emp.emp_no,
 	t.title,
 	t.from_date,
 	t.to_date
-INTO retirement_titles
+--INTO retirement_titles
 FROM employees as emp
 LEFT JOIN titles as t
 ON emp.emp_no = t.emp_no
@@ -22,7 +22,7 @@ ORDER BY emp_no, to_date DESC;
 
 -- Employee retirement count by title
 SELECT COUNT(ut.emp_no), ut.title
-INTO retiring_titles
+--INTO retiring_titles
 FROM unique_titles as ut
 GROUP BY ut.title
 ORDER BY count DESC;
@@ -42,3 +42,10 @@ FROM employees as emp
 		ON (emp.emp_no = t.emp_no)
 WHERE (de.to_date = '9999-01-01') AND
 	(emp.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+ORDER BY emp_no;
+
+-- Number of mentors per department
+SELECT COUNT(mp.emp_no), mp.title
+FROM mentorship_program_eligible as mp
+GROUP BY mp.title
+ORDER BY count;
